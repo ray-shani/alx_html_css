@@ -1,58 +1,179 @@
+/*
+  This CSS file creates a flexbox-based layout and adds custom styling.
+  - The body is a vertical flex container.
+  - The main content area is a horizontal flex container.
+  - The article takes 2/3 of the width, and aside takes 1/3.
+*/
 
+/* Import a clean, modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* Step 1 & 2: Set body as a flex container with a column direction */
+/* --- Core Layout (Do Not Change) --- */
+
 body {
   display: flex;
   flex-direction: column;
-  /* Set a minimum height to ensure the layout fills the viewport */
   min-height: 100vh;
   margin: 0;
+  /* New Global Styles */
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fc; /* Light gray background */
+  color: #333; /* Dark gray text for readability */
 }
 
-/* Make header and footer take up only the space they need */
-header, footer {
-  flex-shrink: 0;
-}
-
-
-/* Step 1 & 2: Set main as a flex container with a row direction */
-/* Step 3: Ensure the <main> tag grows to fill available space */
 main {
   display: flex;
   flex-direction: row;
-  flex: auto; /* This makes the main area fill the remaining vertical space */
+  flex: auto;
 }
 
-/* Step 4: Make the <article> take up 2/3 of the width */
-/* Step 5: Enable vertical scrolling for <article> */
 article {
-  flex: 2; /* Takes up 2 parts of the available space */
-  overflow-y: auto; /* Allows scrolling if content is too long */
-  padding: 20px; /* Adds some spacing inside the article */
+  flex: 2;
+  overflow-y: auto;
+  padding: 2rem 3rem; /* More padding */
 }
 
-/* Step 4: Make the <aside> take up 1/3 of the width */
-/* Step 5: Enable vertical scrolling for <aside> */
 aside {
-  flex: 1; /* Takes up 1 part of the available space */
-  overflow-y: auto; /* Allows scrolling if content is too long */
-  padding: 20px; /* Adds some spacing inside the aside */
-  background-color: #f4f4f4; /* A light background to distinguish it */
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: #e9eef2; /* Slightly darker aside */
+  border-left: 1px solid #d1d9e0;
 }
 
-/* Basic styling for the table for better readability */
+/* --- New Custom Styling --- */
+
+header {
+  background-color: #ffffff;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid #d1d9e0;
+  display: flex; /* Use flexbox to align logo and nav */
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+header h1, header p {
+  margin: 0;
+}
+
+header p {
+  color: #555;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between nav items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 2.5rem; /* Makes the character bigger */
+  font-weight: bold;
+  color: #0056b3;
+  padding: 0;
+}
+.logo:hover {
+  background-color: transparent; /* Prevent hover effect on logo */
+  color: #003d82; /* Darken on hover */
+}
+
+
+/* --- Article Inner Styling --- */
+
+article h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003d82; /* Dark blue for main headings */
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #0056b3;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+article h2:first-child {
+  margin-top: 0;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #d1d9e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #0056b3;
+}
+
+/* Contact Links Styling */
+#contact a {
+  display: inline-block;
+  margin-right: 1rem;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#contact a:hover {
+  background-color: #003d82;
+}
+
+
+/* --- Miscellaneous Styling --- */
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 1px solid #d1d9e0;
+  padding: 12px;
   text-align: left;
 }
 
 th {
-  background-color: #e9e9e9;
+  background-color: #e9eef2;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #003d82; /* Dark blue footer */
+  color: white;
+  flex-shrink: 0;
 }
