@@ -1,0 +1,36 @@
+body{
+  margin: 0 0 0 0;
+}
+
+nav{
+  color: white;
+  position: relative;
+}
+
+ul{
+  display: flex;
+}
+li{
+  margin-left:4rem;
+  position: absolute;
+  align-items: end;
+}
+.header-container{
+  background-image: url(images/headphones_hero_1.jpg); 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-section{
+color: white;
+text-align: center;
+}
+p{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+padding-top: 2rem;
+ padding-bottom: 2rem;
+}
+button{
+  text-align: center;
+}
