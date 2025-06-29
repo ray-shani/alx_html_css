@@ -87,3 +87,63 @@ transition: background-color 0.3s ease;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+/* End of conttact us section */
+
+/* Our results speak for themselves section */
+.results{
+  background-image: url(/images/headphones_hero_2.jpg);
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom:5rem;
+}
+.results-heading{
+    margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+
+}
+.results-p{
+  color: white;
+  text-align: center;
+  width: 50%;
+     margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+/* End of our results speak for themselves section */
+
+/* Form section */
+.contact-us-form{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  line-height: 2rem;
+}
+/* End of form section */
+
+/* Footer section */
+.end{
+  background-color: rgb(9, 1, 1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-logo{
+  width: 25%;
+  margin-left: 3rem;
+}
+.icons{
+  color: white;
+  line-height: 2rem;
+  margin-left: 4rem;
+}
+
+/* End of footer section */
